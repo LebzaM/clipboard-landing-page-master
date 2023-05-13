@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Clipboard landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    .Heading{color: black;text-align: center;}
+    .subtext{color: grey;text-align: center;margin-bottom: 10px;}
+    /* .Container{height: 100%;width: 100%; background-image: url(./images/bg-header-desktop.png);} */
+    .container-header {
+      height: 100vh;
+      /* display: flex; */
+      text-align: center;
+      margin-bottom: 10px;
+      justify-content: center;
+      justify-self: center;
+      background-image: url(./images/bg-header-desktop.png);
+      background-repeat: no-repeat;
+
+      
+
+      
+      
+
+    }
+
+    .ios{
+      margin-top: 70px;
+      border-radius: 80px;
+      background-color: cyan;
+      /* box-shadow:  16px 16px 3px #bebebe, -16px -16px 3px #ffffff; */
+      padding: 15px 72px;
+      cursor: pointer;
+      font-weight: bolder;
+      color: white;
+      border: none;
+      
+     
+    }
+
+    .mac{
+      margin-top: 70px;
+      border-radius: 80px;
+      background-color: rgb(93, 7, 151);
+      /* box-shadow:  16px 16px 3px #bebebe, -16px -16px 3px #ffffff; */
+      padding: 15px 72px;
+      cursor: pointer;
+      font-weight: bolder;
+      color: white;
+      border: none;
+      @media screen and (max-width: 650px) {
+        display: wrap;
+        text-align: center;
+        justify-content: center;
+        
+
+        
+      }
+      
+    }
+   
+    .container-content{
+      display: flex; 
+      flex-direction: column;
+      gap: 25vh;
+      padding: 0px 100px;
+      
+    }
+
+    .container-content h4{
+      @media screen and (max-width:650px) {
+        text-align: center;
+        
+      }
+    }
+
+    .computer{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    flex: 1;
+
+    @media screen and (max-width:650px) {
+      width: 150px;
+      height: 300px
+      
+        
+    }
+    
+    }
+
+    .computer-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+    
+
+    
+    
+    }
+    .computer-content{
+      width: 100%;
+      height: 100%;
+     
+      
+    }
+
+    .wrapper-content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 50px;
+    @media screen and (max-width:650px) {
+      display: block;
+      
+      
+        
+    }
+    }
+
+    .contentsubtext{
+      color: grey;
+     
+      @media screen and (max-width:650px) {
+        text-align: center;
+
+    }
+    }
+    .devices{
+      flex: 1;
+      height: 90%;
+      width: 90%;
+
+      @media screen and (max-width:650px) {
+        height: 50%;
+        width: 100%;
+
+    }
+
+
+    }
+
+    .wrapper-access{
+      height: 100vh;
+    }
+
+    .container-card{
+      padding-top: 20px;
+      float: left;
+      width: 100%;
+      /* padding: 0 10px; */
+      display:flex;
+      flex-direction: row;
+      max-width: 1080px;
+      margin: auto;
+      /* padding-left: 25px;
+      padding-right: 25px; */
+      @media screen and (max-width:650px) {
+        display: block;
+
+    }
+      
+      
+    }
+
+    .card-wrapper{
+      text-align: center;
+      padding: 16px;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      
+  
+    }
+    
+
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      
+    }
+    
+    .card-wrapper img{
+      width: 50px;
+      margin-top: 20px;
+      
+    } 
+
+    .img-row{
+      display:flex;
+      flex-direction: row;
+      gap:65px;
+      padding-top: 100px;
+      text-align: center;
+      justify-content: center;
+      padding-bottom: 100px;
+      @media screen and (max-width:650px) {
+        display:block;
+        flex-direction: column;
+
+    }
+      
+      
+      
+
+    }
+    .logos img{
+      width:100%;
+      height:100%;
+      flex-direction: row;
+
+      @media screen and (max-width:650px) {
+        width: 50%;
+        height: 50%;
+        padding-bottom: 75px;
+
+    }
+      
+
+    }
+
+    .container-clipboard{
+      height: 50vh;
+      
+      /* display: flex; */
+      text-align: center;
+      margin-bottom: 10px;
+      justify-content: center;
+      justify-self: center;
+
+      @media screen and (max-width:650px) {
+      height: 80vh;
+      
+        
+    }
+      
+      
+      
+    }
+    .subtext{
+      color: grey;
+      text-align: center;
+    }
+    .footer{
+      align-items: center;
+      background-color: rgb(194, 191, 191);
+      display: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 20vh;
+      @media screen and (max-width: 650px) {
+        height: 60vh;
+        text-align: center;
+        
+      }
+      
+      
+      
+    }
+    .footer-wrapper{
+      display: flex;
+      flex-direction:row;
+      gap: 80px;
+      row-gap: 10px;
+      padding-top: 20px;
+      overflow-x:hidden;
+      @media screen and (max-width: 650px) {
+        gap:10px;
+        flex-direction:column;
+        display: block;
+        
+        
+      }
+
+      
+      
+    }
+
+    
+
+    /* .footer-wrapper p{
+      margin-top: 30px;
+      justify-content: space-around;
+    } */
+
+    .copyright-footer{
+      width: 50px;
+      height: 50px;
+      padding-left: 50px;
+      padding-right: 30px;
+
+    }
+
+    
+    .socialmedia{
+      display: flex;
+      flex-direction: row;
+      height: 30px;
+      width: 30px;
+      gap: 20px;
+      padding-left: 40px;
+
+      @media screen and (max-width: 650px) {
+        text-align: center;
+        padding-left: 120px;
+        padding-top: 30px;
+        
+        
+      }
+    }
+
+
+    
+
+    
+
+    
+
+   
+
+    
+    /* container display flex */
+  </style>
+</head>
+<body>
+  <div class="Container">
+
+  <div class="container-header">
+  <img class="copyright" src="./images/logo.svg" />
+
+  <h1 class="Heading">A history of everything you copy</h1>
+
+  <div class="subtext">Clipboard allows you to track and organize everything you 
+  copy. Instantly access your clipboard on all your devices.</div>
+
+  <Button class="ios">Download for IOS</Button>
+  <Button class="mac">Download for Mac</Button>
+
+  
+</div>
+  
+  
+  <h1 class="Heading">Keep track of your snippets</h1>
+  <div class="subtext">Clipboard instantly stores any item you copy in the cloud, 
+    meaning you can access your snippets immediately on all your 
+    devices. Our Mac and iOS apps will help you organize everything.
+  </div>
+
+  
+  <div class="container-content">
+    <div class="wrapper-content">
+
+  <div class="computer">
+    <img src="./images/image-computer.png" class="computer-content"/>
+  </div>
+
+
+  <div class="computer-details">
+  <h4>Quick Search</h4>
+  <div class="contentsubtext">Easily search your snippets by content, category, web address, application, and more.</div>
+  
+  
+
+  
+
+  <h4>iCloud Sync</h4>
+
+  
+  <div class="contentsubtext">Instantly saves and syncs snippets across all your devices.</div>
+
+  <h4>Complete History</h4>
+
+  <div class="contentsubtext">Retrieve any snippets from the first moment you started using the app.</div>
+  </div>
+
+</div>
+</div>
+  <div class="wrapper-access">
+
+  <h1 class="Heading">Access Clipboard anywhere</h1>
+  <div class="subtext">Whether you're on the go, or at your computer, you can access all your Clipboard 
+    snippets in a few simple clicks.
+  </div>
+  <img src="./images/image-devices.png" class="devices"/>
+</div>
+
+  
+  <h1 class="Heading">Supercharge your workflow</h1>
+  <div class="subtext">We've got the tools to boost your productivity.</div>
+
+  <div class="row">
+  <div class="container-card">
+  
+  
+    <div class="card-wrapper">
+      <img src="./images/icon-blacklist.svg" alt="book"/>
+      
+      <h4>Create blacklists</h4>
+  
+      
+      <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+    </div>
+  
+  
+
+  <div class="card-wrapper">
+    <img src="./images/icon-text.svg" alt="book"/>
+    
+    <h4>Plain text snippets</h4>
+
+    
+    <p>Remove unwanted formatting from copied text for a consistent look.</p>
+  </div>
+  
+
+  <div class="card-wrapper">
+    <img src="./images/icon-preview.svg" alt="book"/>
+    
+    <h4>Sneak preview</h4>
+    <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+
+    
+
+  </div>
+
+  
+
+  </div>
+  </div>
+
+
+  <div class="img-row">
+    <div class="logos">
+      <img src="./images/logo-google.png"/>
+
+    </div>
+    <div class="logos">
+      <img src="./images/logo-ibm.png"/>
+
+    </div>
+    <div class="logos">
+      <img src="./images/logo-microsoft.png"/>
+
+    </div>
+
+    <div class="logos">
+      <img src="./images/logo-vector-graphics.png"/>
+
+    </div>
+
+  </div>
+  <!-- <images in row/> -->
+  <div>
+  <div class="container-clipboard">
+  <h1 class="Heading">Clipboard for iOS and Mac OS</h1>
+
+  <div class="subtext">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+    and you're ready to start adding to your clipboard.</div>
+
+  <Button class="ios" >Download for IOS</Button>
+  <Button class="mac">Download for Mac</Button>
+</div>
+</div>
+
+  
+
+  
+
+<footer class="footer">  
+<div class="footer-wrapper">
+  <img class="copyright-footer" src="./images/logo.svg" />
+  <p>FAQs</p>
+  <p>Contact Us</p>
+  <p>Privacy Policy</p>
+  <p>Press Kit</p>
+  <p>Install Guide</p>
+<div class="socialmedia">
+  <img  src="./images/icon-facebook.svg" />
+  <img  src="./images/icon-twitter.svg" />
+  <img  src="./images/icon-instagram.svg" />
+</div>
+</div>
+<div></div>
+  
+  
+    <!-- <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Olebogeng Mariri</a>.
+    </p> -->
+  </footer>
+</div>
+</body>
+</html>
